@@ -1,9 +1,12 @@
 package models;
 
+import annotation.Storage;
 import annotations.GetValue;
 
+@Storage
 public class Product {
     private String name;
+
     private Double price;
 
     @GetValue("sale")

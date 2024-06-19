@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    `java-library`
 }
 
 group = "org.ukma"
@@ -10,8 +11,8 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":my-lombock"))
-    annotationProcessor(project(":my-lombock"))
+    implementation("com.squareup:javapoet:1.13.0")
+    implementation("javax.annotation:javax.annotation-api:1.3.2")
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
