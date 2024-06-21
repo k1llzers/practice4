@@ -67,29 +67,4 @@ public class NotNullSetterProcessor extends AbstractProcessor {
             processingEnv.getMessager().printMessage(Diagnostic.Kind.ERROR, "Error writing file: " + e.getMessage());
         }
     }
-//        String fieldName = fieldElement.getSimpleName().toString();
-//        String methodName = "set" + Character.toUpperCase(fieldName.charAt(0)) + fieldName.substring(1);
-//        String fieldType = fieldElement.asType().toString();
-//        String className = fieldElement.getEnclosingElement().getSimpleName().toString();
-//        MethodSpec setter = MethodSpec.methodBuilder(methodName)
-//                .addModifiers(Modifier.PUBLIC)
-//                .returns(void.class)
-//                .addParameter(Object.class, fieldName)
-//                .beginControlFlow("if ($L == null)", fieldName)
-//                .addStatement("throw new IllegalArgumentException($S)", fieldName + " cannot be null")
-//                .endControlFlow()
-//                .addStatement("this.$L = ($L) $L", fieldName, fieldType, fieldName)
-//                .build();
-//        TypeSpec generatedClass = TypeSpec.classBuilder(className + "SetterGenerated")
-//                .addModifiers(Modifier.PUBLIC)
-//                .addField()
-//                .addMethod(setter)
-//                .build();
-//        JavaFile javaFile = JavaFile.builder(processingEnv.getElementUtils().getPackageOf(fieldElement).toString(), generatedClass)
-//                .build();
-//        try {
-//            javaFile.writeTo(processingEnv.getFiler());
-//        } catch (IOException e) {
-//            processingEnv.getMessager().printMessage(Diagnostic.Kind.ERROR, e.toString());
-//        }
 }
