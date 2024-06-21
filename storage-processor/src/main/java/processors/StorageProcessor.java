@@ -6,7 +6,6 @@ import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.ParameterizedTypeName;
-import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 
 import javax.annotation.processing.AbstractProcessor;
@@ -25,7 +24,7 @@ import java.util.Set;
 
 @SupportedAnnotationTypes("annotation.Storage")
 @SupportedSourceVersion(SourceVersion.RELEASE_21)
-public class NotNullSetterProcessor extends AbstractProcessor {
+public class StorageProcessor extends AbstractProcessor {
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
         for (Element element : roundEnv.getElementsAnnotatedWith(Storage.class)) {
