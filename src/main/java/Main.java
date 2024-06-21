@@ -8,8 +8,8 @@ public class Main {
     public static void main(String[] args) {
         ProductStorage storage = new ProductStorage();
         Product product = new Product("Картопля", 100.0);
-        storage.add(product);
         valueProcessor.process(product);
+        storage.add(product);
         System.out.println(product);
     }
 }
